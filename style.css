@@ -1,0 +1,729 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'TheMixSemiBold-Plain', Arial, sans-serif;
+    font-size:0.8em;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px; /* Increase padding for taller navbar */
+    background-color: rgba(0, 0, 0, 0.4); /* Transparent Background */
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    font-family: 'TheMixSemiBold-Plain', Arial, sans-serif;
+}
+
+.logo img {
+    height: 100px; /* Increase logo size */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 0.9rem; /* Decrease font size of nav links */
+}
+
+/* Add down arrow to dropdown links */
+.arrow-down {
+    margin-left: 5px;
+    font-size: 0.7rem; /* Make down arrow smaller */
+}
+
+/* Join button */
+.join-btn {
+    background-color: #0078BE;
+    height: auto;
+    width: 50px;
+    padding: 10px 2 0px;
+    border-radius: 20px;
+    color: white;
+    font-size: 0.9rem; /* Adjust font size of join button */
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.dropdown-content li {
+    list-style: none;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    transition: background-image 1s ease-in-out; 
+    background-image: url('.vscode/assets/slide1.jpg');
+}
+
+.hero-text{
+    margin-top: 30%;
+}
+/* Hero Text Styling */
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'TheMixBlack-Caps', Arial, sans-serif;
+}
+
+.hero p {
+    font-size: 3.5rem;
+    margin-top: 10px;
+    font-family: 'TheMixBlack-Plain', Arial, sans-serif;
+}
+
+/* Section Styling */
+.foundations {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.foundations h2 {
+    font-size: 2.3rem;
+    font-weight: bolder ;
+    margin-bottom: 30px;
+}
+
+/* Container for the foundation items */
+.foundation-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+
+.foundation {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 200px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.foundation img {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+.foundation h3 {
+    font-size: 0.9rem !important;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-family: 'TheMixBlack-Caps', Arial, sans-serif;
+}
+
+.foundation p {
+    font-size: 0.85rem !important;
+    line-height: 1.5;
+    color: #666;
+    font-family: 'TheMixBlack-Plain', Arial, sans-serif;
+}
+
+/* Hover effect on foundations */
+.foundation:hover {
+    background-color: #c7d8ea;
+}
+
+/* Explore the Vision Section */
+.explore-vision {
+    position: relative;
+    text-align: center;
+    background-image: url('.vscode/assets/Shared-Space-at-BDD.png'); ;
+    padding: 50px 0;
+}
+
+.explore-vision h2 {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.play-button img {
+    margin-left: 25%;
+    width: 50%;
+    height: auto;
+    display: block;
+}
+
+.community {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.community h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Layout for Image and Columns */
+.community-layout {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+
+/* Left-side Diagonal Image */
+.community-image {
+    flex: 1;
+    position: relative;
+    max-width: 30%;
+    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+    overflow: hidden;
+}
+
+.community-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Right-side Columns */
+.community-columns {
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+/* Individual Column Item Styling */
+.community-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(25% - 20px);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.community-item h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 2px;
+    font-family: 'TheMixBlack-Caps';
+}
+
+.community-item ul {
+    list-style: none;
+    padding-left: 0;
+    line-height: 1.8;
+}
+
+/* Custom List Item Styling with Arrows */
+.community-item ul li {
+    position: relative;
+    padding-left: 25px;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    text-align: left;
+    color: gray;
+}
+
+/* Add arrow before each list item */
+.community-item ul li:before {
+    content: "\25BA"; /* Unicode for right-pointing arrow */
+    color: gray;   /* Blue arrow color */
+    font-size: 0.8rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Styling for Know More Button */
+.know-more {
+    background-color: #0078BE;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 30px; /* Rounded button */
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.know-more:hover {
+    background-color: #0056b3;
+}
+/* App Download Section */
+.app-download {
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 30px 0;
+}
+
+.app-download p {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: gray;
+    margin-bottom: 20px;
+}
+
+.download-buttons a {
+    margin: 0 10px;
+}
+
+.download-buttons img {
+    width: 5cm;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.download-buttons img:hover {
+    transform: scale(1.05);
+}
+
+/* Hub Info Section */
+.hub-info {
+    background-image: url('.vscode/assets/parallax-light.jpg'); /* Specify your image path here */
+    background-size: cover; /* Make the image cover the entire section */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-attachment: fixed; /* Optional: Make the background fixed when scrolling */
+    text-align: center;
+    padding: 50px 20px;
+    color: white;
+}
+
+
+.hub-info h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #000;
+}
+
+.hub-stats {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    width: 140px;
+    height: 300px;
+    text-align: center;
+}
+
+.stat-item img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.stat-item p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000;
+}
+
+.stat-item span {
+    font-size: 2rem;
+    display: block;
+    color: #007bff;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .hub-stats {
+        flex-direction: column;
+    }
+
+    .stat-item {
+        margin-bottom: 20px;
+    }
+}
+
+/* Counter Animation */
+.counter {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 1024px) {
+    .community-image {
+        max-width: 40%;
+    }
+
+    .community-item {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .community-layout {
+        flex-direction: column;
+    }
+
+    .community-image, .community-columns {
+        max-width: 100%;
+    }
+
+    .community-item {
+        width: 100%;
+    }
+}
+/* What's Trending Section */
+.whats-trending {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.whats-trending h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.trending-wrapper {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.trending-container {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.trending-item {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.trending-item img {
+    width: 300px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.trending-content h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.trending-content p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.prev-btn, .next-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Dots for pagination */
+.dots {
+    margin-top: 20px;
+}
+
+.dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #007bff;
+}
+
+/* Visit Blog Button */
+.visit-blog-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.visit-blog-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Community Words Section */
+.community-words {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.community-words h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.community-videos {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.video-slide {
+    flex: 1;
+}
+
+.video-slide video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Pagination Dots */
+.video-pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.video-pagination .dot {
+    height: 15px;
+    width: 15px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.video-pagination .dot.active {
+    background-color: #007bff;
+}
+
+/* Footer Section */
+.site-footer {
+    background-color: #222;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: left;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.newsletter p {
+    margin-bottom: 10px;
+}
+
+.app-buttons img {
+    width: 120px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 0.9rem;
+}
+
+.footer-bottom a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+.footer-social a {
+    margin: 0 10px;
+}
+
+.footer-social img {
+    width: auto;
+    height: 25px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .community-videos {
+        flex-direction: column;
+    }
+
+    .video-slide {
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Import the custom fonts using @font-face */
+@font-face {
+    font-family: 'TheMixSemiBold-Plain';
+    font-weight: 400;
+    font-display: auto;
+    src: url('https://beirutdigitaldistrict.com/wp-content/uploads/2023/06/TheMixSemiBold-Plain.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'TheMixBlack-Plain';
+    font-weight: 400;
+    font-display: auto;
+    src: url('https://beirutdigitaldistrict.com/wp-content/uploads/2023/06/TheMixBlack-Plain.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'TheMixBlack-Caps';
+    font-weight: 400;
+    font-display: auto;
+    src: url('https://beirutdigitaldistrict.com/wp-content/uploads/2023/06/TheMixBlack-Caps.woff2') format('woff2');
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .community-item, .foundation {
+        width: calc(33.33% - 20px); /* Three items per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .community-item, .foundation {
+        width: calc(50% - 20px); /* Two items per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .community-item, .foundation {
+        width: 100%; /* Single item per row */
+    }
+}
